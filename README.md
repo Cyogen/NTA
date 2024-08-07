@@ -11,7 +11,6 @@ Gain a deep understanding of network traffic examination.   This will make it po
 - Identification and analysis of non-standard or suspicious hosts, networking protocols, TCP issues, and network misconfigurations.
 - Detecting malware on the wire (ransomware, exploits, non-standard interactions, etc)
 - TCP/IP Stack & OSI Model
-- 
 
 ### Tools Used
 
