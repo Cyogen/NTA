@@ -36,3 +36,4 @@ The blue shows the client establishing a session to the server using port 443.
 The session is initiated using TCP, and a TLS ClientHello is sent to start the TLS Handshake. 
 During the handshake the parameters are agreed on.  (Session ID, peer x509 cert, compression algorithm, cipher spec, session resumable, and the 48-byte master secret shared between client and server to validate the session. 
 
+All data and methods will be sent through the TLS connection and appear as TLS Application Data (red box).
