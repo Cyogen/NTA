@@ -19,7 +19,7 @@ Gain a deep understanding of network traffic examination.   This will make it po
 - Tshark
 - NGrep
 - tcpick
-- Network taps
+- Network taps (Gigamon, Niagra-taps)
 - Span Ports
 - Elastic Stack
 - SIEM (Splunk)
