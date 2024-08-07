@@ -37,3 +37,21 @@ The session is initiated using TCP, and a TLS ClientHello is sent to start the T
 During the handshake the parameters are agreed on.  (Session ID, peer x509 cert, compression algorithm, cipher spec, session resumable, and the 48-byte master secret shared between client and server to validate the session. 
 
 All data and methods will be sent through the TLS connection and appear as TLS Application Data (red box).
+
+# TLS Handshake (RFC:2246)
+1. Client and server excahnge hello messages to agree on connection parameters.
+2. Client and server exchange necessary cryptographic parameters to establish a premaster secret.
+3. Client and server will exchange x.509 certificates and cryptographic information allowing for authentication within the session.
+4. Generate a master secret from the premaster secret and exchanged random values.
+5. Client and server issue negotiated security parameters to the record layer portion of the TLS protocol.
+6. Client and server verify that their peer has calculated the same security parameters and that the handshake occurred without tampering by an attacker.
+
+# FTP (RFC:959)
+![ftp-example](https://github.com/user-attachments/assets/12ca390a-dd51-490f-8778-a3263561dc90)
+
+Green arrows are requests issued to the FTP server, the responses sent back from the FTP server are blue arrows.
+
+FTP Commands:
+USER, PASS, PORT, PASV, LIST, CWD, PWD, SIZE, RETR, QUIT.
+
+# SMB
