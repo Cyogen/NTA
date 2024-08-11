@@ -87,16 +87,11 @@ Include ASCII and Hex Output:<br>
 Craft a custom tcpdump:<br>
   `sudo tcpdump -i eth0 -nnvXX`<br><br>
 ![image](https://github.com/user-attachments/assets/5a4c56d7-b5ea-473c-bb15-25c491c5fdf7)
-<br>
-Helpful TCPDump Filters: <br>
-Filter 	      Result <br>
-host 	        host will filter visible traffic to show anything involving the designated host. Bi-directional<br>
-src / dest 	  src and dest are modifiers. We can use them to designate a source or destination host or port.<br>
-net 	        net will show us any traffic sourcing from or destined to the network designated. It uses / notation.<br>
-proto 	      will filter for a specific protocol type. (ether, TCP, UDP, and ICMP as examples)<br>
-port 	        port is bi-directional. It will show any traffic with the specified port as the source or destination.<br>
-portrange 	  portrange allows us to specify a range of ports. (0-1024)<br>
-less / greater "< >" 	less and greater can be used to look for a packet or protocol option of a specific size.<br>
-and / && 	    and && can be used to concatenate two different filters together. for example, src host AND port.<br>
-or 	          or allows for a match on either of two conditions. It does not have to meet both. It can be tricky.<br>
-not 	        not is a modifier saying anything but x. For example, not UDP. <br>
+<br><br><br>
+The following are other examples of filters:<br>
+`sudo tcpdump -i eth0 portrange 0-1024`<br>
+`sudo tcpdump -i eth0 less 64` <br>
+`sudo tcpdump -i eth0 host 192.168.0.1 and port 23` <br>
+
+
+
