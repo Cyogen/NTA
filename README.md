@@ -54,4 +54,21 @@ Green arrows are requests issued to the FTP server, the responses sent back from
 FTP Commands:
 USER, PASS, PORT, PASV, LIST, CWD, PWD, SIZE, RETR, QUIT.
 
-# SMB
+# Effective Analysis
+
+1.  Know your environment.
+2.  Host placement for capturing traffic is critical.
+3.  Persistence
+
+# Analysis Approach
+
+Standard protocols first then work into specific only to the org. HTTP/S, FTP, E-mail, and basic TCP uDP traffic will be the most common things seen coming from around the world.
+Start with these and clear out anything that is not necessary.  then checo for stanard protocls that allow for communications between networks, such as SSH, RDP, or Telnet. 
+(Be mindful of your network sec policy).
+
+- Look for patterns.
+- Check for host to host connections.
+- Look for unique events:
+  Host visiting a specific site multiple times a day and changing its pattern only once. Random port being bound once or twice on a host.
+
+## Tcpdump
