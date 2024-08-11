@@ -74,19 +74,17 @@ Start with these and clear out anything that is not necessary.  then checo for s
 ### Tcpdump
   A command line packet sniffer that can directly capture and interpret data frames from a file or network interface. 
 Built for use on any Unix-like OS.   Ports to Windows (WinDump) have ceased to be supported. 
- 
- # Basic Capture Options:
-D  Will display any interfaced available to capture from. 
-i 	Selects an interface to capture from. ex. -i eth0
-n 	Do not resolve hostnames.
-nn 	Do not resolve hostnames or well-known ports.
-e 	Will grab the ethernet header along with upper-layer data.
-X 	Show Contents of packets in hex and ASCII.
-XX 	Same as X, but will also specify ethernet headers. (like using Xe)
-v, vv, vvv 	Increase the verbosity of output shown and saved.
-c 	Grab a specific number of packets, then quit the program.
-s 	Defines how much of a packet to grab.
-S 	change relative sequence numbers in the capture display to absolute sequence numbers. (13248765839 instead of 101)
-q 	Print less protocol information.
-r file.pcap 	Read from a file.
-w file.pcap 	Write into a file
+
+List available interfaces: <br>
+  `sudo tcpdump -D`<br>
+Choosing an interface to capture from:<br>
+  `sudo tcpdump -i eth0`<br>
+Display Ethernet Header:<br>
+  `sudo tcpdump -i eth0 -e`<br>
+Include ASCII and Hex Output:<br>
+  `sudo tcpdump -i eth0 -X`<br><br>
+  
+Craft a custom tcpdump:<br>
+  `sudo tcpdump -i eth0 -nnvXX`<br><br>
+![image](https://github.com/user-attachments/assets/5a4c56d7-b5ea-473c-bb15-25c491c5fdf7)
+<br>
