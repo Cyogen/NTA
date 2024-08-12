@@ -93,5 +93,18 @@ The following are other examples of filters:<br>
 `sudo tcpdump -i eth0 less 64` <br>
 `sudo tcpdump -i eth0 host 192.168.0.1 and port 23` <br>
 
-
-
+### WireShark
+Below is a screenshot of Wireshark:
+<br>
+![image](https://github.com/user-attachments/assets/869828bb-1b86-43b0-b3b7-5348c1e6ff8d)
+<br>
+1.  Packet List: <br>
+  The top section is the packet list, shows a summary line of each packet that invludes default fields.<br>
+2.  Packet Details: <br>
+  The packet details, on the bottom left of the window, allows deep packet inspection of protocols with deeper details. <br>
+  The packet is broken down into chunks that follow the typical OSI Model reference.<br>
+  Wireshark will show the encapsulation in reverse order with lower layer at the top of the window and higher levels at the bottom.<br>
+3.  Packet Bytes:<br>
+  Bottom right of the winodw shows the packet contents in ASCII or hex.  Selecting a field from other windows will highlight in the packet Bytes window.<br>
+   Each line in the output contains the data offset, sixteen hexadecimal bytes, and sixteen ASCII bytes. Non-printable bytes are replaced with a period in the ASCII format.
+ 
